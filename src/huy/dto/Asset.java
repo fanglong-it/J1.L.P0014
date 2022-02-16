@@ -94,9 +94,7 @@ public class Asset extends Information implements Comparable<Asset> {
 
     @Override
     public String toString() {
-        return "Asset{" + "color=" + color + ", price=" + price + ", weight=" + weight + ", quantity=" + quantity + '}';
+        return "Asset{" + "Id=" + super.id + "Name=" + super.getName() + "color=" + color + ", price=" + price + ", weight=" + weight + ", quantity=" + quantity + '}';
     }
-    
-    
 
 }

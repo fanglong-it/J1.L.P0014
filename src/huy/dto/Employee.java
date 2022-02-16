@@ -9,7 +9,8 @@ package huy.dto;
  *
  * @author Fangl
  */
-public class Employee extends Information{
+public class Employee extends Information {
+
     private String birthdate;
     private String role;
     private String sex;
@@ -73,12 +74,7 @@ public class Employee extends Information{
 
     @Override
     public String toString() {
-        return "Employee{" + "birthdate=" + birthdate + ", role=" + role + ", sex=" + sex + ", password=" + password + '}';
+        return "Employee{" + "Id=" + super.id + "Name=" + super.getName() + "birthdate=" + birthdate + ", role=" + role + ", sex=" + sex + ", password=" + password + '}';
     }
-    
-    
-    
-    
-    
-    
+
 }
