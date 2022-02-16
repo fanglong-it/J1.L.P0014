@@ -5,6 +5,7 @@
  */
 package huy.utils;
 
+import huy.dto.Asset;
 import huy.dto.Employee;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -65,17 +66,37 @@ public class util {
     }
 
     public static boolean checkLogin(String username, String password, ArrayList<Employee> employees) {
-        
         boolean isCorrect = false;
         for (int i = 0; i < employees.size(); i++) {
             String id = employees.get(i).getId();
             String pass = employees.get(i).getPassword();
-           if(id.equals(username) && pass.equals(password)){
-               isCorrect = true;
-           }
+            if (id.equals(username) && pass.equals(password)) {
+                isCorrect = true;
+            }
         }
         return isCorrect;
-        
+    }
+
+    public static Asset findAssetById(String id, ArrayList<Asset> assets) {
+        Asset a = null;
+        for (Asset asset : assets) {
+            if (asset.getId().equals(id)) {
+                a = asset;
+            }
+        }
+        return a;
+    }
+
+    
+
+    public static boolean checkAssetIdExist(String id, ArrayList<Asset> assets) {
+        boolean exist = false;
+        for (Asset asset : assets) {
+            if (asset.getId().equals(id)) {
+                exist = true;
+            }
+        }
+        return exist;
     }
 
     public static void main(String[] args) {

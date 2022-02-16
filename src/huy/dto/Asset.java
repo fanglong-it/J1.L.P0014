@@ -5,11 +5,14 @@
  */
 package huy.dto;
 
+import java.util.Comparator;
+
 /**
  *
  * @author Fangl
  */
-public class Asset extends Information{
+public class Asset extends Information implements Comparable<Asset> {
+
     private String color;
     private double price;
     private double weight;
@@ -71,14 +74,29 @@ public class Asset extends Information{
         this.name = name;
     }
 
-   
-    
+    @Override
+    public int compareTo(Asset t) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static Comparator<Asset> byName = new Comparator<Asset>() {
+        @Override
+        public int compare(Asset t, Asset t1) {
+
+            if (t.getName().compareTo(t1.getName()) > 0) {
+                return 1;
+            } else if (t.getName().compareTo(t1.getName()) < 0) {
+                return -1;
+            }
+            return 0;
+        }
+    };
+
+    @Override
+    public String toString() {
+        return "Asset{" + "color=" + color + ", price=" + price + ", weight=" + weight + ", quantity=" + quantity + '}';
+    }
     
     
 
-    
-    
-    
-    
-    
 }

@@ -11,7 +11,7 @@ package huy.management;
  */
 public class AssetMenu {
     public void menuMain() {
-        System.out.println("");
+        System.out.println("==============================================");
         System.out.println("Welcome to vehicle management program.");
         System.out.println("Choose the following functions to play with.");
         System.out.println("1. Login");

@@ -12,6 +12,7 @@ import java.util.Date;
  * @author Fangl
  */
 public class Request {
+
     private String requestId;
     private String assetId;
     private String employeeId;
@@ -65,6 +66,10 @@ public class Request {
     public void setRequestDate(Date requestDate) {
         this.requestDate = requestDate;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Request{" + "requestId=" + requestId + ", assetId=" + assetId + ", employeeId=" + employeeId + ", quantity=" + quantity + ", requestDate=" + requestDate + '}';
+    }
+
 }

@@ -5,7 +5,9 @@
  */
 package huy.management;
 
+import huy.dto.Asset;
 import huy.utils.util;
+import java.util.ArrayList;
 import javax.rmi.CORBA.Util;
 
 /**
@@ -16,11 +18,12 @@ public class AssetManagement {
 
     AssetFunction assetFunction = new AssetFunction();
     AssetMenu menu = new AssetMenu();
+    
 
     public void management() {
         int choice;
-        assetFunction.readFile();
-
+        assetFunction.readFileEmployee();
+        assetFunction.readFileAsset();
         do {
             menu.menuMain();
             choice = util.getAnInteger("Enter your choice from 1->8: ", "Please enter your choice from 1->8: ", 1, 8);
@@ -31,28 +34,20 @@ public class AssetManagement {
                     assetFunction.login();
                     break;
                 case 2:
-//                    int choice2;
-//                    do {
-//                        menu.addVehicle();
-//                        choice2 = util.getAnInteger("Enter your choice from 1->3: ", "Please enter your choice from 1->3: ", 1, 3);
-//                        switch (choice2) {
-//                            case 1:
-//                                showRoom.addVehicle(1);
-//                                break;
-//                            case 2:
-//                                showRoom.addVehicle(2);
-//                                break;
-//                            case 3:
-//                                System.out.println("Quit");
-//                                break;
-//                        }
-//                    } while (choice2 != 3);
-                    assetFunction.printEmployee();
+                    String searchValue = util.getString("Input search Value:", "", "^[a-zA-Z0-9\\s]*$");
+                    ArrayList<Asset> assets = assetFunction.searchAssetName(searchValue);
+                    assetFunction.sortAssetByName(assets);
+                    
                     break;
                 case 3:
+                    
+                    assetFunction.createAsset();
 //                    showRoom.updateVehicle();
                     break;
                 case 4:
+                    
+                    assetFunction.updateAsset();
+                    
 //                    showRoom.deleteVehicle();
                     break;
                 case 5:
