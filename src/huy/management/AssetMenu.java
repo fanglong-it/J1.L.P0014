@@ -7,7 +7,7 @@ package huy.management;
 
 /**
  *
- * @author Fangl
+ * @author Asus
  */
 public class AssetMenu {
     public void menuMain() {

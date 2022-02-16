@@ -7,7 +7,7 @@ package huy.dto;
 
 /**
  *
- * @author Fangl
+ * @author Asus
  */
 public class Employee extends Information {
 

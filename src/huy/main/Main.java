@@ -9,7 +9,7 @@ import huy.management.AssetManagement;
 
 /**
  *
- * @author Fangl
+ * @author Asus
  */
 public class Main {
     public static void main(String[] args) {

@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Fangl
+ * @author Asus
  */
 public class util {
 

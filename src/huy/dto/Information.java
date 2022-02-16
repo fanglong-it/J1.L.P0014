@@ -7,7 +7,7 @@ package huy.dto;
 
 /**
  *
- * @author Fangl
+ * @author Asus
  */
 public abstract class Information {
     protected String id;

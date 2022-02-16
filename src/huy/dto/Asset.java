@@ -9,7 +9,7 @@ import java.util.Comparator;
 
 /**
  *
- * @author Fangl
+ * @author Asus
  */
 public class Asset extends Information implements Comparable<Asset> {
 

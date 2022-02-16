@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author Fangl
+ * @author Asus
  */
 public class Request {
 
